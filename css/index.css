@@ -133,5 +133,15 @@ table {
 html,
 body {
   height: 100%;
-  background-color: red;
+}
+#particles-js {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  border: solid red;
+}
+header {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
