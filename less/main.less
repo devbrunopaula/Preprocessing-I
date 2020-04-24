@@ -1,0 +1,142 @@
+// -------------------------------
+//      Table Of Content
+// -------------------------------
+
+// Cotainer:      Line 11
+// Top Image:     Line 32
+// Skills:        Line71
+// Work Hisotry:  Line 114
+
+
+
+// -------------------------------
+//            Containers
+// -------------------------------
+.container {
+	// background-color: yellow;
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.wrapper {
+	min-height: calc(100vh - 5rem);
+}
+.image-wrapper {
+	padding: 3rem 2rem;
+	@media(max-width: 500px){
+		text-align: center;
+	}
+	
+}
+
+
+ // -------------------------------
+//            Top Image
+// -------------------------------
+
+.top-image {
+	background-color: @bg-color;
+	img{
+		
+		height: 30rem;
+		@media(max-width: 500px){
+			display: flex;
+			justify-content: center;
+			margin: 0 auto;
+		}
+	}
+	h1{
+		font-size: 3rem;
+		padding: 1rem 0;
+	}
+	h2{
+		font-size: 1.8rem;
+		font-weight: 200;
+		padding: .5rem 0 2rem 0;
+	}
+	p{
+		padding: 2rem 0;
+		font-size: 1.5rem;
+	}
+	button{
+		background-color: @btn-bg-color;
+		padding: 1rem 1.2rem;
+		color: white;
+        font-weight: bold;
+        cursor: pointer;
+	}
+	li {
+		font-size: 1.5rem;
+		padding: .5rem 0;;
+	}
+}
+
+// -------------------------------
+//            Skills
+// -------------------------------
+.skills {
+	padding: 3rem 0;
+	display: flex;
+	
+	div {
+		flex: 1;
+	}
+	@media(max-width: 500px){
+		.flex();
+		
+	}
+}
+.skills .left {
+	padding-right: 1.5rem;
+	line-height: 1.2rem;
+	font-size: 1rem;
+
+	h2 {
+		.defaultSpace();
+	}
+	p{
+		font-size: 1.2rem;
+		font-weight: 400;
+	}
+}
+.skills .right {
+	p{
+		border: 1px solid @bg-color;
+		padding: 1rem;
+	}
+	h2{
+		.defaultSpace();
+	}
+	p{
+		font-size: 1.2rem;
+		font-weight: 400;
+	}
+}
+
+// -------------------------------
+//       Work History Table
+// -------------------------------
+  .work {
+	padding: 0rem 0;
+	h2 {
+		font-size: 1.8rem;
+		padding: 1rem 0;
+	 }
+  }
+
+.work table {
+	border-collapse: collapse;
+	overflow-x:auto;
+	width: 100%;
+	font-size: 1.5rem;
+	@media(max-width: 500px){
+		font-size: 1.5rem;
+	}
+	
+	th, td {
+		text-align: left;
+		padding: 8px;
+	  }
+	  
+	  tr:nth-child(even) {background-color: #f2f2f2;}
+  }

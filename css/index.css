@@ -2,31 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://fonts.gstatic.com/s/roboto/v20/KFOkCnqEu92Fr1MmgWxP.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlvAw.ttf) format('truetype');
-}
-.flex {
-  display: flex;
-  justify-content: center;
-}
 .defaultSpace {
   font-size: 1.8rem;
   padding: 1rem 0;
@@ -168,16 +143,30 @@ body {
   font-size: 62.5%;
   color: black;
 }
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://fonts.gstatic.com/s/roboto/v20/KFOkCnqEu92Fr1MmgWxP.ttf) format('truetype');
 }
-.wrapper {
-  min-height: calc(100vh - 5rem);
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
 }
-.image-wrapper {
-  padding: 3rem 2rem;
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlvAw.ttf) format('truetype');
+}
+.flex {
+  display: flex;
+  justify-content: center;
 }
 nav {
   padding: 2rem;
@@ -192,10 +181,49 @@ nav {
   }
 }
 nav a {
-  padding: 2rem;
-  font-size: 2rem;
-  text-decoration: none;
   color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+nav a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: gray;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+nav a:hover:after {
+  width: 100%;
+  left: 0;
+}
+nav .active {
+  font-weight: 800;
+}
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.wrapper {
+  min-height: calc(100vh - 5rem);
+}
+.image-wrapper {
+  padding: 3rem 2rem;
+}
+@media (max-width: 500px) {
+  .image-wrapper {
+    text-align: center;
+  }
 }
 .top-image {
   background-color: #E9ECEF;
@@ -207,6 +235,7 @@ nav a {
   .top-image img {
     display: flex;
     justify-content: center;
+    margin: 0 auto;
   }
 }
 .top-image h1 {
@@ -227,6 +256,7 @@ nav a {
   padding: 1rem 1.2rem;
   color: white;
   font-weight: bold;
+  cursor: pointer;
 }
 .top-image li {
   font-size: 1.5rem;
